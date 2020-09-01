@@ -31,7 +31,7 @@ export default function ensureAuthenticated(
 
     //Sobrescrever tipos de uma lib para que user seja válido dentro do request;
     //Que na verdade é só um anexo do que será colocado nela a partir do arquivo express.d.ts;
-    request.user = { id: sub }
+    request.user = { id: sub };
 
     return next();
   } catch (err) {
